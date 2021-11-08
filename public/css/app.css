@@ -1,0 +1,19 @@
+.left-panel {
+  background-color: #163838;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  font-family: "Courier New", Courier, monospace;
+}
+
+body {
+  min-height: 100vh;
+  background-color: #2B5554;
+  color: white;
+}
+
+/*# sourceMappingURL=app.css.map*/
