@@ -17,3 +17,10 @@ use Illuminate\Support\Facades\Route;
 Route::middleware('auth:sanctum')->get('/user', function (Request $request) {
     return $request->user();
 });
+
+
+
+// api/ prefix is automatic within this file (api.php)
+Route::get('/movies-list-test', 'Api\PersonController@moviesTest');
+Route::get('/person/{person_id}', 'Api\PersonController@show');
+Route::get('/person', 'Api\PersonController@index');
