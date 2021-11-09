@@ -22,5 +22,12 @@ Route::middleware('auth:sanctum')->get('/user', function (Request $request) {
 
 // api/ prefix is automatic within this file (api.php)
 Route::get('/movies-list-test', 'Api\PersonController@moviesTest');
-Route::get('/person/{person_id}', 'Api\PersonController@show');
 Route::get('/person', 'Api\PersonController@index');
+Route::get('/person/search', 'Api\PersonController@search');
+Route::get('/person/{person_id}', 'Api\PersonController@show')->where('person_id', '\d+');
+
+// /api/person/search
+             //      ?search=abc
+
+// /api/person
+    //        ?search=abc

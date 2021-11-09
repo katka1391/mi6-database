@@ -51,4 +51,13 @@ class PersonController extends Controller
         // return the results
         return $people;
     }
+
+    public function search(Request $request)
+    {
+        $search_term = $request->input('search');
+
+        $people = Person::where('name', 'like', $search_term . '%')->orderBy('name')->get();
+
+        return $people;
+    }
 }
