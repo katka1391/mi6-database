@@ -13,4 +13,5 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/', 'IndexController@index');
+Route::get('/', 'IndexController@index')->name('homepage');
+Route::get('/people-of-interest', 'PersonController@index')->name('person.index');

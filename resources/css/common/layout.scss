@@ -1,0 +1,25 @@
+* {
+    box-sizing: border-box;
+}
+
+html {
+    font-family: 'Courier New', Courier, monospace;
+}
+
+body {
+    margin: 0;
+    min-height: 100vh;
+    background-color: $background-color;
+    color: $text-color;
+    display: flex;
+}
+
+.main {
+    display: flex;
+
+    &__content {
+        flex-grow: 1;
+        margin-left: 2em;
+        background: transparent url('/img/mi6-seal-bg.png') center center/80% auto no-repeat scroll;
+    }
+}

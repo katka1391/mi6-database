@@ -6,9 +6,9 @@
 
     <div class="left-panel__navigation">
 
-        <a class="left-panel__link" href="">Home</a>
+        <a class="left-panel__link" href="{{ route('homepage') }}">Home</a>
 
-        <a class="left-panel__link" href="">People of interest</a>
+        <a class="left-panel__link" href="{{ route('person.index') }}">People of interest</a>
 
     </div>
 
