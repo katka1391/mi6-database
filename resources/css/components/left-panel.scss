@@ -4,6 +4,10 @@
     background-color: #163838;
     color: white;
 
+    &--agent {
+        background-color: rgb(65, 4, 4);
+    }
+
     &__seal {
         padding: 1em;
         text-align: center;

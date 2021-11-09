@@ -30,6 +30,9 @@ body {
   background-color: #163838;
   color: white;
 }
+.left-panel--agent {
+  background-color: #410404;
+}
 .left-panel__seal {
   padding: 1em;
   text-align: center;

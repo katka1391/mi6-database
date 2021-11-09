@@ -15,3 +15,6 @@ use Illuminate\Support\Facades\Route;
 
 Route::get('/', 'IndexController@index')->name('homepage');
 Route::get('/people-of-interest', 'PersonController@index')->name('person.index');
+
+// any URL that begins with /agent should display the agent.app view
+Route::view('/agent/{param?}', 'agent.app')->where('param', '.*')->name('agent');

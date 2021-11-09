@@ -10,6 +10,8 @@
 
         <a class="left-panel__link" href="{{ route('person.index') }}">People of interest</a>
 
+        <a class="left-panel__link" href="{{ route('agent') }}">Agent access</a>
+
     </div>
 
 </div>

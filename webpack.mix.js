@@ -27,6 +27,7 @@ if (!mix.inProduction()) {
 //                SCSS                  CSS
 mix.sass('resources/css/app.scss', 'public/css');
 mix.js('resources/js/PeopleOfInterest/index.js', 'public/js/people-of-interest.js').react();
+mix.js('resources/js/Agent/index.js', 'public/js/agent.js').react();
 
 mix.browserSync({
         host: 'localhost',
