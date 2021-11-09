@@ -12,6 +12,10 @@ body {
     background-color: $background-color;
     color: $text-color;
     display: flex;
+
+    &.agent-access {
+        background-color: #424242;
+    }
 }
 
 .main {

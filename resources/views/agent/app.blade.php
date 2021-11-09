@@ -8,7 +8,7 @@
 
     <link rel="stylesheet" href="{{ mix('css/app.css') }}">
 </head>
-<body>
+<body class="agent-access">
 
     <div id="app" class="main"></div>
 

@@ -5,7 +5,7 @@
     color: white;
 
     &--agent {
-        background-color: rgb(65, 4, 4);
+        background-color: #410404;
     }
 
     &__seal {
@@ -31,5 +31,9 @@
         &:hover {
             background-color: #3f6b6b;
         }
+    }
+
+    &--agent &__link:hover{
+        background-color: #522323;
     }
 }
