@@ -26,6 +26,7 @@ if (!mix.inProduction()) {
 //             source file          resulting file
 //                SCSS                  CSS
 mix.sass('resources/css/app.scss', 'public/css');
+mix.js('resources/js/PeopleOfInterest/index.js', 'public/js/people-of-interest.js').react();
 
 mix.browserSync({
         host: 'localhost',

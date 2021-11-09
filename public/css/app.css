@@ -16,11 +16,12 @@ body {
 
 .main {
   display: flex;
+  flex-grow: 1;
 }
 .main__content {
   flex-grow: 1;
   margin-left: 2em;
-  background: transparent url("/img/mi6-seal-bg.png") center center/80% auto no-repeat scroll;
+  background: transparent url("/img/mi6-seal-bg.png") top center/80% auto no-repeat scroll;
 }
 
 .left-panel {
@@ -48,6 +49,21 @@ body {
 }
 .left-panel__link:hover {
   background-color: #3f6b6b;
+}
+
+.list-of-people__headline {
+  text-align: center;
+}
+.list-of-people__search {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.list-of-people__search-input {
+  padding: 0.5em;
+  font-size: 1.5em;
+  border-radius: 0.125em;
+  border: 0;
 }
 
 /*# sourceMappingURL=app.css.map*/
