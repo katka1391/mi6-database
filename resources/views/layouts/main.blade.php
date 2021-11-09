@@ -10,7 +10,17 @@
 </head>
 <body>
 
-    @yield('content')
+    <main class="main">
+
+        @include('common.left-panel')
+
+        <div class="main__content">
+
+            @yield('content')
+
+        </div>
+
+    </main>
 
 </body>
 </html>
