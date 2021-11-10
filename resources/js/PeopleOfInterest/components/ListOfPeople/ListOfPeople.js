@@ -1,4 +1,5 @@
 import { useEffect, useState } from "react"
+import { get } from '../../../util/request';
 
 export default function ListOfPeople() {
 
@@ -7,10 +8,15 @@ export default function ListOfPeople() {
 
     const loadPeopleData = async () => {
         const url = '/api/person/search?search=' + encodeURIComponent(searchTerm);
-        const response = await fetch(url);
-        const data = await response.json();
 
-        setPeople(data);
+        // use our predefined get function
+        // to make a GET http request
+        // get an axios response object
+        const response = await get(url);
+
+        // use the .data property of the axios response object
+        // to set the people
+        setPeople(response.data);
     }
 
     // run loadPeopleData on change of the searchTerm

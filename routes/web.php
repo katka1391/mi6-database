@@ -18,3 +18,6 @@ Route::get('/people-of-interest', 'PersonController@index')->name('person.index'
 
 // any URL that begins with /agent should display the agent.app view
 Route::view('/agent/{param?}', 'agent.app')->where('param', '.*')->name('agent');
+
+// any URL that begins with /missions should display the missions.app view
+Route::get('/missions/{param?}', 'MissionController@reactApp')->where('param', '.*')->name('missions');

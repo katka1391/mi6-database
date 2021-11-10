@@ -23,7 +23,8 @@ body.agent-access {
 }
 .main__content {
   flex-grow: 1;
-  margin-left: 2em;
+  margin-left: 1em;
+  padding: 1em;
   background: transparent url("/img/mi6-seal-bg.png") top center/80% auto no-repeat scroll;
 }
 
@@ -60,6 +61,20 @@ body.agent-access {
   background-color: #522323;
 }
 
+.top-menu {
+  background-color: #00000044;
+  display: flex;
+}
+.top-menu a {
+  font-size: 1.25em;
+  padding: 1em;
+  color: white;
+  text-decoration: none;
+}
+.top-menu a:hover {
+  text-decoration: underline;
+}
+
 .list-of-people__headline {
   text-align: center;
 }
@@ -73,6 +88,30 @@ body.agent-access {
   font-size: 1.5em;
   border-radius: 0.125em;
   border: 0;
+}
+
+.mission-edit-form {
+  max-width: 600px;
+}
+.mission-edit-form__form-group {
+  display: flex;
+  flex-direction: column;
+  padding: 1em;
+}
+.mission-edit-form input[type=text],
+.mission-edit-form select {
+  padding: 0.5em;
+  border: 0;
+  border-radius: 0.125em;
+}
+.mission-edit-form button {
+  background-color: green;
+  color: white;
+  border: 0;
+  border-radius: 0.125em;
+  padding: 1em;
+  align-self: center;
+  cursor: pointer;
 }
 
 /*# sourceMappingURL=app.css.map*/
