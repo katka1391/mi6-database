@@ -9,10 +9,12 @@ class MissionController extends Controller
 {
     public function store(Request $request){
         $this->validate($request, [
-            'name'=>'required|min:3|max:255'
+            'name'=>'required|min:3|max:255',
+            'year' => 'required|numeric|min:1960|max:2100',
+            'outcome'=>'required|in:in-progress,success,failure'
         ]);
 
-//        return $request->all();
+        $mission = Mission::create($request->all());
 
         return [
             'status' => 'success',

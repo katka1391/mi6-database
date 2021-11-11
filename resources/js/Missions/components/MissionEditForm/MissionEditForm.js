@@ -50,6 +50,7 @@ export default function MissionEditForm() {
         <form className="mission-edit-form"
               action="" method="post" onSubmit={handleSubmit}>
 
+            <p>Mission successfuly saved</p>
             <div className="mission-edit-form__form-group">
 
                 <label className="mission-edit-form__label">
@@ -57,7 +58,7 @@ export default function MissionEditForm() {
                 </label>
 
                 <input type="text" name="name" value={ values.name } onChange={ handleChange } />
-
+                <p>Name is required</p>
             </div>
 
             <div className="mission-edit-form__form-group">

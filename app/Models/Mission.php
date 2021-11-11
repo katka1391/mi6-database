@@ -8,4 +8,10 @@ use Illuminate\Database\Eloquent\Model;
 class Mission extends Model
 {
     use HasFactory;
+
+//    protected $fillable = [
+//        'name',
+//        'year',
+//        'outcome'
+//    ];
 }
