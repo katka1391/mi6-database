@@ -26,8 +26,4 @@ Route::get('/person', 'Api\PersonController@index');
 Route::get('/person/search', 'Api\PersonController@search');
 Route::get('/person/{person_id}', 'Api\PersonController@show')->where('person_id', '\d+');
 
-// /api/person/search
-             //      ?search=abc
-
-// /api/person
-    //        ?search=abc
+Route::post('/mission','Api\MissionController@store');
