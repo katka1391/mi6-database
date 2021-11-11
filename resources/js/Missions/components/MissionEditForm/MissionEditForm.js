@@ -1,8 +1,7 @@
-import { useState } from "react"
+import {useState} from "react"
 import axios from 'axios';
 
 export default function MissionEditForm() {
-
     const [values, setValues] = useState(
         {
             name: '',
@@ -10,6 +9,9 @@ export default function MissionEditForm() {
             outcome: ''
         }
     )
+
+    const [success, setSuccess] = useState(null);
+    const [errors, setErrors] = useState({});
 
     const handleChange = (event) => {
         setValues(previous_values => {
@@ -24,19 +26,27 @@ export default function MissionEditForm() {
 
         console.log('form is being submited');
 
+        setErrors({});
+
         try{
             const response = await axios.post('/api/mission', values);
 
             // stops here and wait for response from ajax request
             console.log(response.data);
 
-
-            // here comes the code which will be executed if OK
+            setSuccess('Mission successfuly saved');
+            setValues({
+                name: '',
+                year: '2021',
+                outcome: ''
+            })
 
         }catch(error){
             console.log('something went wrong');
             console.log(error.message);
             console.log(error.response);
+
+            setErrors(error.response.data.errors);
 
 
             // here comes the code which will be executed on failure
@@ -44,13 +54,14 @@ export default function MissionEditForm() {
         }
     }
 
-    console.log(values);
-
     return (
         <form className="mission-edit-form"
               action="" method="post" onSubmit={handleSubmit}>
 
-            <p>Mission successfuly saved</p>
+            {
+                success && <p>{success}</p>
+            }
+
             <div className="mission-edit-form__form-group">
 
                 <label className="mission-edit-form__label">
@@ -58,7 +69,12 @@ export default function MissionEditForm() {
                 </label>
 
                 <input type="text" name="name" value={ values.name } onChange={ handleChange } />
-                <p>Name is required</p>
+                {
+                    errors.name && (
+                        <p>{errors.name}</p>
+                    )
+                }
+
             </div>
 
             <div className="mission-edit-form__form-group">

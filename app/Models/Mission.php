@@ -9,9 +9,9 @@ class Mission extends Model
 {
     use HasFactory;
 
-//    protected $fillable = [
-//        'name',
-//        'year',
-//        'outcome'
-//    ];
+    protected $fillable = [
+        'name',
+        'year',
+        'outcome'
+    ];
 }
