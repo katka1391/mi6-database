@@ -21,3 +21,11 @@ Route::view('/agent/{param?}', 'agent.app')->where('param', '.*')->name('agent')
 
 // any URL that begins with /missions should display the missions.app view
 Route::get('/missions/{param?}', 'MissionController@reactApp')->where('param', '.*')->name('missions');
+
+
+Route::get('/user', function(){
+    return [
+        'user' => Auth::user()
+    ];
+});
+
