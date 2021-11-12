@@ -15,7 +15,6 @@ export default function App() {
         console.log('application started');
 
         getUserData();
-        getUserData2();
     }, [])
 
     const getUserData = async () => {
